@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <title>youtube video</title>
+</head>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+      * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+      }
+
+      body {
+            width: 100%;
+            background-color: #000;
+            /* background-color: rgba(0, 0, 255, 0.164); */
+      }
+
+      h1 {
+            font-family: sans-serif;
+            letter-spacing: 5px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 30px;
+            color: crimson;
+            width: 100%;
+      }
+
+      .center {
+            margin: 0 auto;
+            padding-top: 10px;
+            padding-bottom: 90px;
+      }
+
+      .videos {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+      }
+
+      .video {
+            margin: 30px;
+            height: 92%;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            background-color: cornflowerblue;
+      }
+
+      .btn {
+            margin-top: 15px;
+            width: 100%;
+            margin-left: 30px;
+            /* text-align: center; */
+      }
+
+      iframe {
+            width: 100%;
+      }
+
+      .btn a {
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 10px;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            /* background-color: cadetblue; */
+            color: #000;
+            border: 2px solid #fff;
+            cursor: pointer;
+            padding: 0.3rem 1rem;
+      }
+
+
+      .navbar {
+            padding: 20px 0;
+            overflow: hidden;
+            width: 98%;
+            margin: 0 auto;
+            display: flex;
+            background-color: #fff;
+            justify-content: space-around;
+      }
+
+      .logo img {
+            width: 40%;
+            height: 25px;
+            cursor: pointer;
+      }
+
+      .links a {
+            margin: 20px;
+            color: #000;
+            position: relative;
+            text-decoration: none;
+            text-transform: capitalize;
+      }
+
+      .imag {
+            display: none;
+      }
+
+      .links a:after {
+            content: '';
+            width: 0;
+            transition: 0.3s ease-in-out;
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: -12px;
+      }
+
+      .links a:hover {
+            color: gray;
+      }
+
+      .links a:hover::after {
+            width: 100%;
+      }
+
+      @media screen and (max-width:1239px) {
+            .videos {
+                  width: 90%;
+                  height: 100vh;
+                  display: grid;
+                  margin: 0 auto;
+                  grid-template-columns: repeat(1, 1fr);
+            }
+
+            .video {
+                  width: 100%;
+                  margin: 0 auto;
+                  margin-top: 40px;
+                  padding: 0;
+            }
+
+            iframe {
+                  width: 100%;
+                  margin: 0 auto;
+            }
+      }
+
+      @media screen and (max-width:640px) {
+            .navbar {
+                  width: 100%;
+            }
+
+            .links {
+                  display: flex;
+                  position: absolute;
+                  top: -90%;
+                  right: 0;
+                  color: fff;
+                  text-align: center;
+                  left: 0;
+                  height: 90vh;
+                  visibility: hidden;
+                  background: #000;
+                  flex-direction: column;
+                  border-bottom-left-radius: 30px;
+                  border-bottom-right-radius: 30px;
+            }
+
+            .links a {
+                  color: #fff;
+                  font-size: 23px;
+                  margin-top: 40px;
+                  font-family: sans-serif;
+            }
+
+            .show-links {
+                  position: absolute;
+                  top: 10%;
+                  transition: 0.9s ease;
+                  visibility: visible;
+            }
+
+            #color img {
+                  position: absolute;
+                  top: 15px;
+                  width: 30px;
+            }
+      }
+</style>
+
+<body>
+      <div class="container">
+            <nav class="navbar">
+
+                  <div class="logo">
+                        <a href="index.html">
+                              <img src="./images/logo.png" alt="">
+                        </a>
+                  </div>
+
+                  <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="">Product</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html" id="contact">Contact</a>
+                        <a href="contact.html">Account</a>
+                        <a href="video.html">video</a>
+                        <input type="text" placeholder="search..." onkeyup="myFunction()">
+                  </div>
+                  <div class="imag" id="color">
+                        <img src="./images/cart.png" alt="">
+                  </div>
+
+
+            </nav>
+
+            <div class="contaienr">
+                  <h1>Youtube video</h1>
+                  <div class="center">
+                        <div class="videos">
+                              <div class="video" data-aos="zoom-in-up">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oHHDJgLvQQM"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                                    <div class="btn">
+                                          <a href="https://github.com/krishtechn/website-project">Download code</a>
+                                    </div>
+                                    <h1>filmora</h1>
+
+                              </div>
+                              <div class="video" data-aos="zoom-in-up">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/82_7bSyUnQU"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                                    <div class="btn">
+                                          <a
+                                                href="https://github.com/krishtechn/c-programming-tutorial/commit/58441717d9149df458ce92b369958a78e1137dbe">Download
+                                                code</a>
+                                    </div>
+                              </div>
+                              <div class="video" data-aos="zoom-in-left">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1_4vHhRSRlE"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                                    <div class="btn">
+                                          <a
+                                                href="https://github.com/krishtechn/c-programming-tutorial/commit/58441717d9149df458ce92b369958a78e1137dbe">Download
+                                                code</a>
+                                    </div>
+                              </div>
+                              <div class="video" data-aos="zoom-in-right">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/He7ZujzRi0c"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                                    <div class="btn">
+                                          <a
+                                                href="https://github.com/krishtechn/c-programming-tutorial/commit/58441717d9149df458ce92b369958a78e1137dbe">Download
+                                                code</a>
+                                    </div>
+                              </div>
+                              <div class="video" data-aos="zoom-out">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9VB4VU70ZqE"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                                    <div class="btn">
+                                          <a
+                                                href="https://github.com/krishtechn/c-programming-tutorial/commit/58441717d9149df458ce92b369958a78e1137dbe">Download
+                                                code</a>
+                                    </div>
+                              </div>
+                              <div class="video" data-aos="zoom-in">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RzxJ19P00zw"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="zoom-in-out">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K81F2pPKGhk"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="zoom-out-up">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rRgfU_mlSxU"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="zoom-in-right">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CVzlKefdHu8"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="zoom-out-up">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/91cJQVCE0FQ"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/94d75vIiCx8"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+
+                              <div class="video" data-aos="zoom-out-down">                                   <iframe width="560" height="315" src="https://www.youtube.com/embed/23YYywLkjeg"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="zoom-out-left">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dPVLxxljULM"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                              <div class="video" data-aos="fade-up"
+                              data-aos-duration="3000">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HDIYg9NW3QA"
+                                          title="YouTube video player" frameborder="0"
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                          allowfullscreen></iframe>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+
+<script>
+
+      const link = document.querySelector('.links');
+      const btn = document.getElementById('color');
+
+      btn.onclick = () => {
+            //   link.classList.toggle("show-links");
+            if (link.classList.contains('show-links')) {
+                  link.classList.remove('show-links');
+            } else {
+                  link.classList.add('show-links');
+            }
+      }
+
+      window.addEventListener('scroll', function () {
+            if (scrollY > 2000) {
+                  document.body.style.cssText = "background-Color : rebeccapurple;color:white;";
+            } else if (scrollY < 2000) {
+                  document.body.style.cssText = "background-Color : black;color:white;";
+            } else{
+                  document.body.style.cssText = "background-Color : red;color:white;";
+                 }
+          })
+
+        
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+      AOS.init();
+</script>
+
+
+</html>
